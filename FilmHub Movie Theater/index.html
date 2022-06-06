@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FilmHub Movie Theater</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: pink;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">FilmHub Movie Theater </h1>
+    <p>Just a click away</p>
+      <form class="form-inline" action="categories.html">
+        <button>BUY TICKETS NOW!!</button>
+      </form>
+  </div>
+</div>
+<div class="topnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="categories.html">Categories</a>
+  <a href="movie.html">Movie</a>
+  <a href="upcoming.html">Upcoming</a>
+  
+  <a href="feedback.html">FeedBack</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="animation3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="animation6.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="action5.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center ">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+    
+<footer class="container-fluid text-center">
+  <p>Copy Rights 2022. All rights reserved.</p>  
+  <form class="form-inline" action="feedback.html">Get deals:
+    <button type="submit" class="btn btn-danger">Contact</button>
+  </form>
+</footer>
+
+</body>
+</html>
